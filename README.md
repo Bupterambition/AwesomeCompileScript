@@ -103,7 +103,11 @@ MGJPFSecurityCenter	mgjpffinancesdk_ios
 
 	*/30 9-21 * * 1-5 sh /Users/bob/pollBuild.sh /Users/bob/Mogujie/MGJPF
 	
-就可以在后台默默执行。每次执行前会有类似下面这样的提示
+
+这样就可以在后台默默执行。每次执行前会有类似下面这样的提示
+
 
 <img src="http://moguimg.u.qiniudn.com/p1/161018/idid_ifrtmobrgyzgiztbmizdambqhayde_1444x424.jpg
 " width = "400" height = "120" alt="" />
+
+关于crontab的时间格式可以参考[这个](http://www.atool.org/crontab.php)
