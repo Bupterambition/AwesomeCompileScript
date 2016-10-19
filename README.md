@@ -79,7 +79,7 @@ MGJPFSecurityCenter	mgjpffinancesdk_ios
 ```
 所有的组件存在 **`/Users/bob/Mogujie/MGJPF`**目录下
 
-脚本文件随意放置，比如脚本位置为 **`/Users/bob/pollBuild.sh`**
+脚本文件随意放置，比如脚本位置为 **[/Users/bob/pollBuild.sh](http://gitlab.mogujie.org/senmiao/AwesomeCompileScript/raw/master/pollBuild.sh)**
 
 ### 显式执行
 
