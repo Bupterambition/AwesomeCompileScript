@@ -39,7 +39,7 @@
 ### 2.pod update?
 是否需要在`编译前`进行`pod update`呢？这个需要视情况而定。比如你当前正在业务组件的Demo中撸代码，忽然后台进程给你悄悄地pod update了，那只能默默哭了😢，因此这里需要判断一下要进行`pod update`操作的xx.xcworkspace是否已经打开，如果打开了，那么就跳过 `pod update`。[**这里判断某个xcworkspace是否是打开的状态，花了好长时间**(´°̥̥̥̥̥̥̥̥ω°̥̥̥）**，各种的ps -e ps aux lsof 都不成功，因为执行I/O操作后读写进程就结束了**］
 ### 3.how to complile without Xcode
-很明显既然是通过脚本，肯定是通过`xcodebuild命令行`来做［**xctool需要安装，并且目前没有针对Xcode8GM进行更新**］。
+很明显既然是通过脚本，肯定是通过`xcodebuild命令行`来做［**xctool需要安装，并且目前针对Xcode8GM进行更新**］。
 
 思路也非常简单，首先将需要的组件放到同一个目录下，比如我们的支付组件的目录结构类似下面这样
 
@@ -111,3 +111,7 @@ MGJPFSecurityCenter	mgjpffinancesdk_ios
 " width = "400" height = "120" alt="" />
 
 关于crontab的时间格式可以参考[这个](http://www.atool.org/crontab.php)
+### Final
+
+
+使用这个脚本的目的在于加速编译，节省大家开发等待的时间，但是个人认为最优的解决方案还是推动所有组件能支持静态库打包。
