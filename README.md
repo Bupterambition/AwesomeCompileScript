@@ -24,12 +24,12 @@
 
 ```
 
-  pod 'MGJPFFoundation', :path => '../MGJPFFoundation/'
-  pod 'MGJPFPay', :path => '../MGJPFPay/'
-  pod 'MGJPFWallet', :path => '../MGJPFWallet/'
-  pod 'MGJPFSecurityCenter', :path => '../MGJPFSecurityCenter/'
-  pod 'MGJPFFinance', :path => '../MGJPFFinance/'
-  pod 'MGJPFBaifumei', :path => '../MGJPFBaifumei/'
+  pod 'QQPFFoundation', :path => '../QQPFFoundation/'
+  pod 'QQPFPay', :path => '../QQPFPay/'
+  pod 'QQPFWallet', :path => '../QQPFWallet/'
+  pod 'QQPFSecurityCenter', :path => '../QQPFSecurityCenter/'
+  pod 'QQPFFinance', :path => '../QQPFFinance/'
+  pod 'QQPFBaifumei', :path => '../QQPFBaifumei/'
 
 
 ```
@@ -44,15 +44,15 @@
 思路也非常简单，首先将需要的组件放到同一个目录下，比如我们的支付组件的目录结构类似下面这样
 
 ```
-BobdeMacBook-Pro:MGJPF bob$ pwd
-/Users/bob/Mogujie/MGJPF
-BobdeMacBook-Pro:MGJPF bob$ ls
-MGJPFBaifumei		MGJPFShell		mgjpffoundationfwk_ios
-MGJPFDemo		MGJPFVendors_iOS	mgjpffoundationsdk_ios
-MGJPFFinance		MGJPFWallet		mgjpfpayfwk_ios
-MGJPFFoundation		MGJReactiveCocoa	mgjpfpaysdk_ios
-MGJPFPay		mgjpffinancefwk_ios	testmgjpf
-MGJPFSecurityCenter	mgjpffinancesdk_ios
+BobdeMacBook-Pro:QQPF bob$ pwd
+/Users/bob/Mogujie/QQPF
+BobdeMacBook-Pro:QQPF bob$ ls
+QQPFBaifumei		QQPFShell		QQPFfoundationfwk_ios
+QQPFDemo		QQPFVendors_iOS	QQPFfoundationsdk_ios
+QQPFFinance		QQPFWallet		QQPFpayfwk_ios
+QQPFFoundation		MGJReactiveCocoa	QQPFpaysdk_ios
+QQPFPay		QQPFfinancefwk_ios	testQQPF
+QQPFSecurityCenter	QQPFfinancesdk_ios
 
 ```
 
@@ -66,18 +66,18 @@ MGJPFSecurityCenter	mgjpffinancesdk_ios
 还是以我们的支付组件为例，结构目录如下
 
 ```
-BobdeMacBook-Pro:MGJPF bob$ pwd
-/Users/bob/Mogujie/MGJPF
-BobdeMacBook-Pro:MGJPF bob$ ls
-MGJPFBaifumei		MGJPFShell		mgjpffoundationfwk_ios
-MGJPFDemo		MGJPFVendors_iOS	mgjpffoundationsdk_ios
-MGJPFFinance		MGJPFWallet		mgjpfpayfwk_ios
-MGJPFFoundation		MGJReactiveCocoa	mgjpfpaysdk_ios
-MGJPFPay		mgjpffinancefwk_ios	testmgjpf
-MGJPFSecurityCenter	mgjpffinancesdk_ios
+BobdeMacBook-Pro:QQPF bob$ pwd
+/Users/bob/Mogujie/QQPF
+BobdeMacBook-Pro:QQPF bob$ ls
+QQPFBaifumei		QQPFShell		QQPFfoundationfwk_ios
+QQPFDemo		QQPFVendors_iOS	QQPFfoundationsdk_ios
+QQPFFinance		QQPFWallet		QQPFpayfwk_ios
+QQPFFoundation		MGJReactiveCocoa	QQPFpaysdk_ios
+QQPFPay		QQPFfinancefwk_ios	testQQPF
+QQPFSecurityCenter	QQPFfinancesdk_ios
 
 ```
-所有的组件存在 **`/Users/bob/Mogujie/MGJPF`**目录下
+所有的组件存在 **`/Users/bob/Mogujie/QQPF`**目录下
 
 脚本文件随意放置，比如脚本位置为 **[/Users/bob/pollBuild.sh](http://gitlab.mogujie.org/senmiao/AwesomeCompileScript/raw/master/pollBuild.sh)**
 
@@ -85,7 +85,7 @@ MGJPFSecurityCenter	mgjpffinancesdk_ios
 
 如果你只是想测试一下效果，显式执行这个脚本的话，只需打开终端，输入
 
-	sh /Users/bob/pollBuild.sh /Users/bob/Mogujie/MGJPF
+	sh /Users/bob/pollBuild.sh /Users/bob/Mogujie/QQPF
 	
 即可看到终端输出。
 
@@ -101,7 +101,7 @@ MGJPFSecurityCenter	mgjpffinancesdk_ios
 
 然后输入[**`注意有空格`**]
 
-	*/30 9-21 * * 1-5 sh /Users/bob/pollBuild.sh /Users/bob/Mogujie/MGJPF
+	*/30 9-21 * * 1-5 sh /Users/bob/pollBuild.sh /Users/bob/Mogujie/QQPF
 	
 
 这样就可以在后台默默执行。每次执行前会有类似下面这样的提示
