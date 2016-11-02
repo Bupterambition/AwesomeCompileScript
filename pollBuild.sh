@@ -1,17 +1,14 @@
 #!/bin/sh
 function confound() {
     cd $1
-    # echo $1
     filelist=`ls`
     for file in $filelist
     do
-        # echo $file
         if test -f $file 
         then
             FILE=$file;
             if [ "$FILE" == "Podfile" ] || [ "$FILE" == "podfile" ]
             then
-                # echo $file
                 workspace=`find *.xcworkspace -depth 0`
                 searchspace=${workspace%.*}
                 exist=`echo $ALL_Open_XCWorkSpace|egrep -m 1 -o "DerivedData/$searchspace"`
@@ -63,7 +60,7 @@ function eachPull() {
     cd ..
 }
 osascript -e 'display notification "Compiler Begin" with title "AwesomeXcodeComplierScript"'
-declare -x ALL_Open_XCWorkSpace=`lsof -c com.apple`
+ALL_Open_XCWorkSpace=`lsof -c com.apple`
 eachPull $1
 
 confound $1
